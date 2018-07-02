@@ -3,9 +3,11 @@ const express = require('express');
 const forestAdmin = require('forest-express-sequelize');
 const { sequelize } = require('./models');
 const secret = require('../config/secret');
+const setupGraphQL = require('./setupGraphQL');
 
 const app = express();
 
+setupGraphQL(app);
 app.use(
   forestAdmin.init({
     modelsDir: path.resolve('./src/models'),
