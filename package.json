@@ -1,0 +1,47 @@
+{
+  "name": "my-money-node-react-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "9.x.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "cross-env NODE_ENV=test mocha --recursive",
+    "test:coverage": "nyc --reporter=html --reporter=text npm run test",
+    "prettier": "prettier \"./{src,client/src}/**/*.{js,scss}\"",
+    "prettier:check": "npm run prettier -- -l",
+    "prettier:write": "npm run prettier -- --write",
+    "lint": "eslint \"./{src,client/src}/**/*.js\"",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.0.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "prettier": "^1.13.7",
+    "sequelize-cli": "^4.0.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "forest-express-sequelize": "^2.12.8",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0"
+  },
+  "nyc": {
+    "exclude": [
+      "config",
+      "src/models/index.js",
+      "test/**"
+    ]
+  }
+}
