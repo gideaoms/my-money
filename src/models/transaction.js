@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Transaction = sequelize.define("Transaction", {
+  const Transaction = sequelize.define('Transaction', {
     amount: {
       type: DataTypes.DECIMAL(16, 2),
       allowNull: false

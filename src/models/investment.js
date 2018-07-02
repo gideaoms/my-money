@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Investment = sequelize.define("Investment", {
+  const Investment = sequelize.define('Investment', {
     name: DataTypes.STRING
   });
   Investment.associate = function({ Broker, Transaction, BalanceUpdate }) {

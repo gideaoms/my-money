@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const BalanceUpdate = sequelize.define("BalanceUpdate", {
+  const BalanceUpdate = sequelize.define('BalanceUpdate', {
     amount: DataTypes.DECIMAL,
     date: DataTypes.DATEONLY
   });
